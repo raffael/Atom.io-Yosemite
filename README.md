@@ -7,6 +7,10 @@ I'm a huge fan of @Espressoapp, but since the feature set of the app hasn't impr
 - *UI Theme*: Yosemite Unity 
 - *Syntax Theme*: Atom Espresso Soda
 
+## Preview
+
+![Preview](username.github.com/repository/img/image.jpg)
+
 ## How to
 
 Install the dependencies first, and then open your ```style.less``` file in ```~/.atom```. 
