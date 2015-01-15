@@ -9,7 +9,7 @@ I'm a huge fan of @Espressoapp, but since the feature set of the app hasn't impr
 
 ## Preview
 
-![Preview](username.github.com/repository/img/image.jpg)
+![Preview](https://raw.githubusercontent.com/raffael/Atom.io-Yosemite/master/Preview.png)
 
 ## How to
 
