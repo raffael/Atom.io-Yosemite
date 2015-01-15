@@ -1,0 +1,201 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+.tree-view {
+
+}
+
+.editor {
+
+}
+
+.editor .cursor {
+
+}
+
+@import "packages/file-icons/features/force-show-icons";
+
+/* Copied colors from Safari tabs. */
+.tab-bar { height: 22px; }
+.tab {
+  transition: background-color .3s;
+  background-color: #bdbdbd;
+  background-image: linear-gradient(rgba(255,255,255,0.16),rgba(255,255,255,0));
+}
+.tab.active { background-color: #cfcfcf; }
+.tab:hover { background-color: #b4b4b4; }
+.tab.active:hover { background-color: inherit; }
+
+.tab-bar .tab .close-icon {
+  top: 4.5px;
+  left: 5px;
+  height: 16px;
+  width: 16px;
+  transition: background 200ms;
+  background: rgba(100,100,100,0);
+  border-radius: 3px;
+}
+
+@keyframes 'fadeIn' {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tab-bar .tab {
+    border-right-color: #a6a6a6 !important;
+    border-left-color: #a6a6a6 !important;
+    border-top-color: #a0a0a0 !important;
+    border-bottom-color: #959595 !important;
+}
+
+.tab-bar {
+    display: table;
+    table-layout: fixed; /* Makes all tabs have the same width */
+}
+
+.tree-view-scroller {
+    border-top-color: #a0a0a0 !important;
+}
+
+.tool-panel {
+    background: #f0f0f0;
+}
+
+.tab-bar .tab:hover .close-icon:hover {
+  background: rgba(100,100,100,0.2);
+}
+
+.tab-bar .tab .close-icon:before {
+  content: '✕';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.tab-bar .tab:hover .close-icon:active {
+  background: rgba(100,100,100,0.4);
+}
+
+.tabs-tab .title *:before {
+  display: none;
+}
+
+
+
+.status-bar.tool-panel {
+  height: 26px;
+}
+
+.select-list {
+  background: #ededed;
+}
+
+.select-list ol li:not(.selected):hover {
+  background-color: inherit;
+}
+
+.select-list .editor.mini {
+  max-height: 40px;
+  padding: 4px;
+}
+
+.select-list .editor-contents.is-focused {
+  background: white;
+  box-sizing: border-box;
+  border: 1px solid #cecece;
+  border-radius: 3px;
+  padding: 3px;
+  height: 32px !important;
+  max-height: 40px;
+}
+
+.select-list.popover-list {
+  box-shadow: 0 5px 20px -5px rgba(0,0,0,0.5), 0 0 0px 1px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  background: white;
+}
+
+.select-list.popover-list ol.list-group {
+  border-radius: 2px;
+}
+
+.select-list.popover-list ol li {
+  padding: 3px 5px;
+  font-family: 'Menlo';
+}
+
+.select-list.popover-list .list-group li {
+  line-height: 18px;
+}
+.select-list.popover-list ol li {
+  box-shadow: none;
+}
+.select-list.popover-list ol.list-group {
+  box-shadow: none;
+}
+
+.autocomplete-plus {
+  padding: 1px !important; /* <-- set this to, e.g., 2px, if you want to inspect the autocompletion list */
+}
+
+
+.editor .gutter {
+  background: #fbfbfb;
+  font-size: 9px;
+  line-height: 15px;
+  color: grey;
+  margin-right: 0px;
+}
+
+button.btn {
+  cursor: default;
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+}
+button.btn:hover {
+  cursor: default;
+  background: inherit;
+}
+
+.tree-view .selected:before,
+.tree-view:focus .selected:before {
+  background: #d3d5dd; /* light grey background for selected items */
+}
+.tree-view .entry > .header > .name, .tree-view .entry > .name {
+  color: #3c3d3f; /* Non-selected list items */
+}
+
+.tree-view .selected.entry > .header > .name, .tree-view .selected.entry > .name {
+  color: #20242a; /* Selected list item */
+}
+.tree-view .entry.selected > .header > .name:before, .tree-view .entry.selected > .name:before {
+  color: inherit;
+}
+
+.icon-file-directory:before {
+  content: "";
+  width: 16px;
+  height: 18px;
+  margin-bottom: -2px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 4px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAcCAYAAAAAwr0iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0Qjk4MDhERjRBMzMxMUU0Qjg0MUMwQjA0NUU5MjlFRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0Qjk4MDhFMDRBMzMxMUU0Qjg0MUMwQjA0NUU5MjlFRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRCOTgwOERENEEzMzExRTRCODQxQzBCMDQ1RTkyOUVFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRCOTgwOERFNEEzMzExRTRCODQxQzBCMDQ1RTkyOUVFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+z1avqAAABP9JREFUeNrEVruuHEUQre7pmX2wyFyQbISILSTgF4hAFl9Axg/wA46wRETERxDwC0YWETkRshCOQSKAKwy+d+/O9HRRp+v0ziQWiTEjzc5MP6pOnao+tUHsUlX5/NHPeh2TTBol2dhNLpL6IGFWuYiTPPjonSDPuUJ47tS/XnXn/W9/0u1rdyRtBpEiMkeRvjTjAHOSvy5/l6/u3Q0vGoC5kuE6DjJsB1H7KDYSzV7o7WlUZPvebDayf/V1efDoscoLvgD94rOHTy7vvPmWJHOmYMAGO0xGf56KMzEer+Xvq2spOctcCsiSwSYqaIM/F0uZpbNLURypSp7s1wKJOUjuVDY2diuM8sW99yptSHcPHga7x2rQNthd1CczFsWaGdnv9nLY72UiQKzpsN59ifmXqE7rSHpx17QGDwjXeDPK/YeP9cuP3w3wYREm+eG3p1IsqpMh7TFKFKE6sOhg2Aq0BCtO8zplld5yhXHUQDHqApjqwII7K4YIZsBKYBAgvbf3g+7wMVQAf869VfwgyWhIxr+SehSDZg9JWZSI2A6IdFavSX0tGIBzpCIwr4V53BavI7BVwdg9z0WeTVggr1RSZgFCi84WD7apU+euzMgnjql/IwoYQXFWgJ1T3tkzkX7YqI5srAdY3rqq+mS+UC9If/LhYk5CRYf8JtucDSCoMrCey+BjKfmzjVW2bM0UHUQiCNCAvR3ZrPsR7Ozv85zPgColiCKS4ka1xCVS2IQx5ByJA8henB04qo6pGyA3RmcmtEIN/ky9r1FSUhlItioxP4WThbRh00Y8UhjW2esBxnOr9JYi0jz0vgY2p84ZAuBayI01lmRqUqzmvRaULeqxKXsUEyPqm3BEHxcChVOsAVPIeTuCYCvTQRU29aMKUKWmTZcUJENTiK6p6hh8QyStwu9qkXR3BBtZoLAxIkXqcxvbMyDFtmYqrjETwZcwLwB0MoXiOQUI+NglpyxQZPCEMxgvrHBU+olRwxGKNnXuIFPS4RBAMI50bJrKZl1ScCrZznFwo+KO6bdGNxApopp0pQeIstUGxWcr7hzRTJzHlm3005FJZtZ5AdCzYgtzKRQV1MTA94kOwFyiU0Q2nVXPgWaC6ym9yjRWPeu8yzbJPgMobCw9VU7DarJzKhAJmlLieYfhrF4fKNCZwt/TYeSxLlR1IK6FGLxAC3XAT4F1NxiGCA1NWtdnnCKyozDBkJI54XtkkcLOWHz/uNKVSNWMPFVUQH+ieUZ2wsJegInC6AJTk3mMhBS2WhGKDL4nAq5FS/0fV2IUWyctKyVU29lTOiG1idR1PLPnVhqo+RQszA9US7ClzRFFqT2r/jMIpdwHylZl4I29dUNbcUG6lMKRVwKUDNGx92OIwqtnn09Q3pWl26guhVp7AdKbPQ3tdB23KwCX11eyu5nkGFrobBpUvvoelz8gTR/g5Ka4EdbquXUXWaQ5tJ+w/HH54+lxAXD7MMhuHmWz39YamKnnJzKA1p1Y1QATVn0f/b6u4do5OVtnFmdv34EFXfvA6Ubire4M7rbd73/y9fffjbYL5RitkrJVZDJFmTsv0MLy78zCZFT0tlVtTTQ6otFyHFEbszmL3qzQ3m3vWLxTNf3Ixs3BWuc3n37woU38WP+U2n3X7repqC/jwgn9xe4nSMGV3b9y4vCSADyjz6tzC8f/s1XR/9fXxMDHoKryf17/CDAAVKgxZ9B/m9kAAAAASUVORK5CYII=);
+  /* Generic Yosemite folder icon, called icon.png. Original in /.atom */
+}
+
+.editor .inline-message.comment-error {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.15);
+  border-radius:3px;
+}
+
+
+/* Changes to Sublime tabs */
+.temp .title {
+  opacity: 0.3;
+}
